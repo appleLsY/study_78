@@ -1,0 +1,36 @@
+ol,ul{
+    list-style: none;
+}
+.poster-main{
+    position: relative;
+    width: 800px;
+    height: 270px;
+}
+.poster-main a, .poster-main img{
+    display: block;
+}
+.poster-main .poster-list{
+    width: 800px;
+    height: 270px;
+}
+.poster-main .poster-list .poster-item{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.poster-main .poster-btn{
+    position: absolute;
+    top: 0;
+    width:100px;
+    height: 270px;
+    z-index: 10;
+    background-color: red;
+}
+.poster-main .poster-prev-btn{
+    left: 0;
+    background: url(../image/right_1.png) no-repeat center center;
+}
+.poster-main .poster-next-btn{
+    right: 0;
+    background: url(../image/right_2.png) no-repeat center center;
+}
