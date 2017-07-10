@@ -25,6 +25,7 @@ ol,ul{
     height: 270px;
     z-index: 10;
     background-color: red;
+    cursor: pointer;
 }
 .poster-main .poster-prev-btn{
     left: 0;

@@ -5,9 +5,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="7_10.css" rel="stylesheet">
-    </head>
+         <script src="../js/jquery.min.js"></script>
+        <script src="7_10.js"></script>
+   </head>
     <body>
-        <div class="poster-main">
+        <div class="J_Poster poster-main">
             <div class="poster-btn poster-prev-btn"></div>
             <ul class="poster-list">
                 <li class="poster-item"><a href="#"><img src="../image/7_10_01.jpg" width="100%"></a></li>
@@ -18,7 +20,14 @@
             </ul>
             <div class="poster-btn poster-next-btn"></div>
         </div>
-        <script src="../js/jquery.min.js"></script>
-        <script src="7_10.js"></script>
+        <script>
+            $(function(){
+                //Carousel 旋转木马
+                //只能单个new，而用集合就使用下面的方法
+                var carousel=new Carousel($("J_Poster").eq(0));
+
+                // Carousel.init($("J_Poster"));
+            })
+        </script>
     </body>
 </html>
