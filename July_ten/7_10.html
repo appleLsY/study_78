@@ -23,10 +23,21 @@
         <script>
             $(function(){
                 //Carousel 旋转木马
+                var setting={
+                    width:1000,
+                    height:270,
+                    posterWidth:500,
+                    posterHeight:270, //图片的真实长宽
+                    verticalAlign:'middle',
+                    scale:0.9,//后面的图片显示前一张图片大小的比例
+                    speed:500,//速度
+
+                };
                 //只能单个new，而用集合就使用下面的方法
-                var carousel=new Carousel($("J_Poster").eq(0));
+                var carousel=new Carousel($("J_Poster").eq(0),setting);
 
                 // Carousel.init($("J_Poster"));
+                
             })
         </script>
     </body>

@@ -1,12 +1,13 @@
 //加分号是引入的jQuery最后封装没有结束符而导致出错，加一个以防错误发生
 ;(function($){
-    var Carousel=function(poster){
-        alert(poster);
+    var Carousel=function(poster,setting){
+        console.log(setting);
     };
     Carousel.prototype={
+        //配置参数
 
     };
-    Carousel.init=function(posters){
+    Carousel.init=function(posters,setting){
         var _this_=this;
         posters.each(function(){
             new _this_($(this));
