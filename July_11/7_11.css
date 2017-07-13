@@ -23,6 +23,9 @@ table {
     text-align: center;
     width: 937px;
 }
+.on{
+    background-color: #e2f2ff;
+}
 th, td {
     border: 1px solid #CADEFF;
 }
