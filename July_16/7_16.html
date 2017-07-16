@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title></title>
+        <!--浏览器兼容问题解决-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+        <!--跨域请求静态html页面的方法-->
+        <!-- <meta http-equiv="Access-Control-Allow-Origin" content="*" /> -->
+        <link href="7_16.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="bg-div">
+            <div class="search-box">
+                <div class="logo"></div>
+                <form class="search-form" action="https://cn.bing.com/search" target="_blank" id="search-form">
+                    <input type="text" class="search-input-text" name="q" id="search_input" autocomplete="off" />
+                    <input type="submit" class="search-input-button" value="" />
+                </form>
+            </div>
+        </div>
+        <div class="suggest" id="search-suggest" style="display:none">
+            <ul id="search-result">
+                <li>搜索结果1</li>
+                <li>搜索结果2</li>
+            </ul>
+
+        </div>
+        <script src="../js/jquery.min.js"></script>
+        <script>
+            $('#search_input').bind('keyup',function(){
+                var searchText=$('#search_input').val();
+                $.get('http://api.bing.com/qsonhs.aspx?q='+searchText,function(d){
+                    var d=d.AS.Results[0].Suggests;
+                    var html='';
+                    for(var i=0;i<d.length;i++){
+                        html+='<li>'+d[i].Txt+'</li>';
+                    }
+                    $('#search-result').html(html);
+                    $('#search-suggest').show().css({
+                        //offset方法就是jQuery中获取位置的方法
+                        top:$('#search-form').offset().top+$('#search-form').height()+10,
+                        left:$('#search-form').offset().left,
+                        position:'absolute'
+                    });
+                
+                },'json');
+
+            })
+            $(document).bind('click',function(){
+                $('#search-suggest').hide();
+            })
+        </script>
+    </body>
+</html>

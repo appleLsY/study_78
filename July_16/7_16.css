@@ -1,0 +1,62 @@
+body{
+    background-color: #333;
+}
+.bg-div{
+    background-image: url(image/river.jpg);
+    width: 1228px;
+    height: 690px;
+    margin: 0 auto;
+    position: relative; 
+}
+.logo{
+    margin: -4px 18px 0 0 ; /*负值为向相反的方向移动*/
+    background-image: url(image/logo.png);
+    width:107px;
+    height: 53px;
+    float: left;
+}
+form{
+    float: left;
+    background-color: #fff;
+    padding: 5px;
+}
+.search-input-text{
+    border: 0;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    outline: none;/*去掉输入框点击之后的高亮效果*/
+    width: 350px;
+}
+.search-input-button{
+    border: 0;
+    background-image: url(image/search-button.png);
+    width: 29px;
+    height: 29px;
+    float: left;
+}
+.search-box{
+    position: absolute; /*相对于body来定位*/
+    top: 200px;
+    left: 300px;
+}
+.suggest{
+    width: 388px;
+    background-color: #fff;
+    border: 1px solid #999;
+}
+.suggest ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.suggest ul li{
+    padding: 3px;
+    font-size: 14px;
+    line-height: 25px;
+    cursor: pointer;
+}
+.suggest ul li:hover{
+    text-decoration: underline;
+    background-color: #e5e5e5;
+}
