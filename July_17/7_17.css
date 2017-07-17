@@ -1,0 +1,73 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-size: 14px;
+    font-family: '微软雅黑';
+}
+a{
+    text-decoration: none;
+}
+#box{
+    height: auto;
+    width: 550px;
+    border: 1px solid #aaa;
+    margin: 0 auto;
+}
+.top{
+    height: 40px;
+}
+.top a{
+    height: 16px;
+    width: 16px;
+    display: block;
+    float: right;
+    margin: 5px;
+}
+.btn-list-off{
+    background: #fff url(image/btns.jpg) no-repeat -38px 0px;
+}
+.btn-car-on{
+    background: #fff url(image/btns.jpg) no-repeat -21px -34px;
+}
+.btn-list-on{
+    background: #fff url(image/btns.jpg) no-repeat -21px 0px;
+}
+.btn-car-off{
+    background: #fff url(image/btns.jpg) no-repeat -38px -32px;
+}
+
+ul li{
+    list-style: none;
+}
+#box ul li{
+    height: auto;
+    width: 164px;
+    border: 1px solid #aaa;
+    float: left;
+    margin: 5px;
+}
+.a-img{
+    height: 164px;
+    width: 164px;
+    display: block; /*将其变成块级元素*/
+    overflow: hidden; /*可以进行清除浮动*/
+}
+p a,p span{
+    display: block;
+    line-height: 20px;
+    padding-left: 10px;
+}
+.bottom{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #ccc;
+}
+.small{
+    height: 50px;
+    width: 50px;
+    display: block;
+    float: left;
+}
